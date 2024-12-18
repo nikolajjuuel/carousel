@@ -1,50 +1,16 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<img width="1092" alt="Screenshot 2024-12-17 at 10 51 49 PM" src="https://github.com/user-attachments/assets/7fc006a8-9a0a-44dc-88a0-4e9c812d6826" />
 
-Currently, two official plugins are available:
+A quick fun little project on improving a logo carousel. I'm using the programming language logos that I've used. Instead of using CSS keyframes that limit user interaction, I made a carousel with more input. IMO this also gives the animation a better flow as it does not have a hard reset phase which can be seen at times with keyframes. 
+* The animation slows down when the mouse approaches the logos
+* Stops when the mouse is on a logo
+* The flow of the animation can be changed by hovering over the chevrons 
+ 
+##### To Get Started
+* Clone this git repository > git@github.com:nikolajjuuel/carousel.git 
+* Install the dependencies > npm i
+* Run the app > npm run dev 
+* By default runs on port 5173 > http://localhost:5173/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
